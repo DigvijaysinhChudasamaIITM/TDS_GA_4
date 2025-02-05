@@ -27,6 +27,10 @@ jobs:
           git add daily-commit.txt
           git commit -m "Daily commit [skip ci]" || exit 0  # Skip if there are no changes
 
+      - name: Pull the latest changes from main
+        run: |
+          git pull https://github.com/${{ github.repository }}.git main --rebase
+
       - name: Push changes to repository
         run: |
           git push https://github.com/${{ github.repository }}.git HEAD:main
