@@ -3,7 +3,7 @@ name: "21f2000588@ds.study.iitm.ac.in"
 on:
   schedule:
     - cron: "0 0 * * *"  # Runs at 00:00 UTC every day
-  workflow_dispatch:  # Allow manual triggers
+  workflow_dispatch:  # Allows manual trigger
 
 jobs:
   daily-commit:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Git configuration
         run: |
           git config --local user.email "21f2000588@ds.study.iitm.ac.in"
-          git config --local user.name "GitHub Actions"
+          git config --local user.name "21f2000588"  # Override GitHub username
 
       - name: Create a file with a daily commit message
         run: |
