@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: 21f2000588@ds.study.iitm.ac.in
         uses: actions/checkout@v4
 
       - name: Set up Git configuration
