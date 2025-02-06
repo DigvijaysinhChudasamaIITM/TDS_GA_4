@@ -1,4 +1,4 @@
-name: Daily Commit
+name: "21f2000588@ds.study.iitm.ac.in"
 
 on:
   schedule:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Git configuration (21f2000588@ds.study.iitm.ac.in)
+      - name: Set up Git configuration
         run: |
           git config --local user.email "21f2000588@ds.study.iitm.ac.in"
           git config --local user.name "GitHub Actions"
@@ -25,9 +25,9 @@ jobs:
       - name: Commit changes
         run: |
           git add daily-commit.txt
-          git commit -m "Daily commit [skip ci]" || exit 0  # Skip if there are no changes
+          git commit -m "Daily commit [skip ci]" || exit 0  # Skip if no changes
 
-      - name: Pull the latest changes from main
+      - name: Pull latest changes from main
         run: |
           git pull https://github.com/${{ github.repository }}.git main --rebase
 
