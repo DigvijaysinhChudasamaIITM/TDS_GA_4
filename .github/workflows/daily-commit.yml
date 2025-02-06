@@ -12,11 +12,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
-      - name: Set up Git user (21f2000588@ds.study.iitm.ac.in)
-        run: |
-          git config --global user.name “GitHub Actions Bot”
-          git config --global user.email “21f2000588@ds.study.iitm.ac.in”
 
       - name: Set up Git configuration
         run: |
